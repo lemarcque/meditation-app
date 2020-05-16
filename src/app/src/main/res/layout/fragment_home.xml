@@ -18,7 +18,7 @@
         android:textAlignment="center"
         android:textStyle="bold"
         android:textSize="18sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black" />
     <!-- Content -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,7 +51,7 @@
                 android:layout_height="180dp"
                 android:layout_width="0dp"
                 android:layout_columnWeight="1"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
                 app:srcImage="@drawable/motivation"
                 app:text="Motivation"/>
@@ -91,15 +91,11 @@
             android:textColor="@android:color/black"/>
 
         <!-- Button : Start -->
-        <Button
-            android:background="@drawable/bkg_btn_rounded"
-            android:backgroundTint="@color/colorAccent"
+        <io.capsulo.meditation.home.RoundedButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Start"
-            android:textColor="@android:color/white"
-            android:paddingHorizontal="40dp"/>
+            app:text="Start" />
 
     </LinearLayout>
 

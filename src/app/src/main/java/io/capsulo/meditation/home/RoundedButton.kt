@@ -6,25 +6,24 @@ import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
 import io.capsulo.meditation.R
-import kotlinx.android.synthetic.main.view_modebutton.view.*
+import kotlinx.android.synthetic.main.view_roundedbutton.view.*
 
 /**
- * View with Button.
+ * Button with round corner.
  */
-class ModeButton(context: Context?, attrs: AttributeSet?) : FrameLayout(context, attrs) {
+class RoundedButton(context: Context?, attrs: AttributeSet?) : FrameLayout(context, attrs) {
 
     init {
         // Inflate the layout
-        inflate(context, R.layout.view_modebutton, this)
+        inflate(context, R.layout.view_roundedbutton, this)
 
         // Retrieve and apply custom attributes
         context!!.theme.obtainStyledAttributes(
             attrs,
-            R.styleable.ModeButton, 0, 0).apply {
+            R.styleable.RoundedButton, 0, 0).apply {
 
             try {
-                imageview_modebutton.setImageDrawable(getDrawable(R.styleable.ModeButton_srcImage))
-                textview_modebutton.text = getString(R.styleable.ModeButton_text)
+                btn_roundedbutton.text = getString(R.styleable.RoundedButton_text)
             }finally {
                 // TypedArray objects are a shared resource and must be recycled after use.
                 recycle()
@@ -33,17 +32,17 @@ class ModeButton(context: Context?, attrs: AttributeSet?) : FrameLayout(context,
     }
 
     override fun onViewAdded(child: View?) {
-        framelayout_button.setOnTouchListener { view, motionEvent ->
+        btn_roundedbutton.setOnTouchListener { view, motionEvent ->
             if(motionEvent.action == MotionEvent.ACTION_DOWN) {
                 // scale your value
-                val reducedvalue = 0.95f
+                val reducedvalue = 0.9f
                 view.animate()
                     .scaleX(reducedvalue)
-                    .scaleY(reducedvalue).duration = 100
+                    .scaleY(reducedvalue).duration = 150
             }else if(motionEvent.action == MotionEvent.ACTION_UP) {
                 view.animate()
                     .scaleX(1f)
-                    .scaleY(1f).duration = 100
+                    .scaleY(1f).duration = 150
             }
             true
         }

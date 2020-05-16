@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- @Google: Crappy design / https://stackoverflow.com/a/4464966 -->
+    <attr name="text" format="string" />
+
+    <!-- Mode button -->
     <declare-styleable name="ModeButton">
-        <attr name="text" format="string" />
+        <attr name="text" />
         <attr name="srcImage" format="reference" />
+    </declare-styleable>
+
+    <!-- Round button -->
+    <declare-styleable name="RoundedButton">
+        <attr name="text" />
     </declare-styleable>
 </resources>

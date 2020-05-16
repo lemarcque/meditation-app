@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Single button -->
+    <Button
+        android:id="@+id/btn_roundedbutton"
+        android:background="@drawable/bkg_btn_rounded"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Start"
+        android:textColor="@android:color/white"
+        android:paddingHorizontal="40dp"/>
+</FrameLayout>
