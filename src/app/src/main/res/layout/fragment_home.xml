@@ -48,6 +48,7 @@
 
             <!-- Motivation -->
             <io.capsulo.meditation.home.ModeButton
+                android:id="@+id/btn_home_motivation"
                 android:layout_height="180dp"
                 android:layout_width="0dp"
                 android:layout_columnWeight="1"
@@ -58,6 +59,7 @@
 
             <!-- Relax -->
             <io.capsulo.meditation.home.ModeButton
+                android:id="@+id/btn_home_relax"
                 android:layout_height="180dp"
                 android:layout_width="0dp"
                 android:layout_columnWeight="1"
@@ -66,6 +68,7 @@
 
             <!-- Anxiety -->
             <io.capsulo.meditation.home.ModeButton
+                android:id="@+id/btn_home_anxiety"
                 android:layout_height="180dp"
                 android:layout_width="0dp"
                 android:layout_columnWeight="1"
@@ -74,6 +77,7 @@
 
             <!-- Concentration -->
             <io.capsulo.meditation.home.ModeButton
+                android:id="@+id/btn_home_concentratioj"
                 android:layout_height="180dp"
                 android:layout_width="0dp"
                 android:layout_columnWeight="1"
@@ -92,9 +96,11 @@
 
         <!-- Button : Start -->
         <io.capsulo.meditation.home.RoundedButton
+            android:id="@+id/btn_home_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:clickable="true"
             app:text="Start" />
 
     </LinearLayout>

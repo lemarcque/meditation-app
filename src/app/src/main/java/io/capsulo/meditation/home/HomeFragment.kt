@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 
 import io.capsulo.meditation.R
+import kotlinx.android.synthetic.main.fragment_home.*
 
 
 /**
@@ -30,6 +32,11 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        println("OKx")
+        btn_home_start.setOnClickListener {
+            println("CL")
+            findNavController().navigate(R.id.action_homeFragment_to_playerFragment)
+        }
     }
 
     companion object {
@@ -39,7 +46,6 @@ class HomeFragment : Fragment() {
          *
          * @return A new instance of fragment HomeFragment.
          */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance() = HomeFragment()
     }

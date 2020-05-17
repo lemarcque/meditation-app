@@ -2,6 +2,7 @@ package io.capsulo.meditation.home
 
 import android.content.Context
 import android.util.AttributeSet
+import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.View
 import android.widget.FrameLayout
@@ -12,6 +13,9 @@ import kotlinx.android.synthetic.main.view_roundedbutton.view.*
  * Button with round corner.
  */
 class RoundedButton(context: Context?, attrs: AttributeSet?) : FrameLayout(context, attrs) {
+
+    private var listener: OnClickListener? = null
+
 
     init {
         // Inflate the layout
@@ -47,4 +51,24 @@ class RoundedButton(context: Context?, attrs: AttributeSet?) : FrameLayout(conte
             true
         }
     }
+
+    override fun dispatchTouchEvent(event: MotionEvent): Boolean {
+        if (event.action == MotionEvent.ACTION_UP) {
+            if (listener != null) listener?.onClick(this)
+        }
+        return super.dispatchTouchEvent(event)
+    }
+
+
+    override fun dispatchKeyEvent(event: KeyEvent): Boolean {
+        if (event.action == KeyEvent.ACTION_UP && (event.keyCode == KeyEvent.KEYCODE_DPAD_CENTER || event.keyCode == KeyEvent.KEYCODE_ENTER)) {
+            if (listener != null) listener?.onClick(this)
+        }
+        return super.dispatchKeyEvent(event)
+    }
+
+    override fun setOnClickListener(listener: OnClickListener?) {
+        this.listener = listener
+    }
+
 }

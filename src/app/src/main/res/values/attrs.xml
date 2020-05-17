@@ -13,4 +13,10 @@
     <declare-styleable name="RoundedButton">
         <attr name="text" />
     </declare-styleable>
+
+    <!-- Sound Controller -->
+    <declare-styleable name="SoundControllerView">
+        <attr name="tint" format="color" />
+        <attr name="title" format="string" />
+    </declare-styleable>
 </resources>
